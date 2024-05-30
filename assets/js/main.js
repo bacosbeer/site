@@ -172,6 +172,36 @@
       preloader.remove()
     });
   }
+/**
+   * bebidas isotope and filter
+   */
+window.addEventListener('load', () => {
+  let bebidasContainer = select('.bebidas-container');
+  if (bebidasContainer) {
+    let bebidasIsotope = new Isotope(bebidasContainer, {
+      itemSelector: '.bebidas-item',
+      layoutMode: 'fitRows'
+    });
+
+    let bebidasFilters = select('#bebidas-flters li', true);
+
+    on('click', '#bebidas-flters li', function(e) {
+      e.preventDefault();
+      bebidasFilters.forEach(function(el) {
+        el.classList.remove('filter-active');
+      });
+      this.classList.add('filter-active');
+
+      bebidasIsotope.arrange({
+        filter: this.getAttribute('data-filter')
+      });
+      bebidasIsotope.on('arrangeComplete', function() {
+        AOS.refresh()
+      });
+    }, true);
+  }
+
+});
 
   /**
    * Menu isotope and filter
