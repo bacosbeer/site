@@ -645,6 +645,14 @@ section {
   color: #cda45e;
 }
 
+.bebidas .bebidas-ingredients {
+  margin-left: 85px;
+  font-style: italic;
+  font-size: 14px;
+  font-family: "Poppins", sans-serif;
+  color: rgba(255, 255, 255, 0.5);
+}
+
 
 
 /*--------------------------------------------------------------
@@ -786,12 +794,18 @@ section {
 .specials .details h3 {
   font-size: 26px;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
   color: #fff;
 }
 
 .specials .details p {
   color: #aaaaaa;
+}
+.specials .details h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 5px;
+  color: #fff;
 }
 
 .specials .details p:last-child {
