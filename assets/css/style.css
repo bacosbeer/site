@@ -160,11 +160,16 @@ h6 {
   border-bottom: 1px solid #37332a;
 }
 
-
-
 #header .logo img {
   max-height: 40px;
 }
+
+#header .redes-sociais {
+  display: flex;
+  align-items: center;
+}
+
+
 
 /*--------------------------------------------------------------
 # Book a table button Menu
